@@ -1,6 +1,6 @@
 function authenticate (login,password) {
 	  if (login == 'login' && password === 'password') {
-		  return 'Welcome2';
+		  return 'Hi guest';
 	  }	  else {
 		  return 'Login is not correct';
 	  }
