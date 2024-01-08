@@ -1,0 +1,14 @@
+resource "aws_security_group" "allowtls" {
+    name = "allowtls"
+    description = "traffice_allow"
+
+    ingress = [
+        description = "TLS from VPC"
+        from_port   = 443
+        to_port     = 443
+        protocol    = "tcp"
+        cidr_blocks = [aws_eip.semeip.public_ip]
+
+    ]
+  
+}
