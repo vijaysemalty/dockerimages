@@ -1,0 +1,13 @@
+# Use the official NGINX base image
+FROM nginx:alpine
+
+# Set the working directory
+
+# Copy your custom static content (HTML, CSS, JS) to the NGINX web root
+COPY . .
+
+# Expose the port NGINX will serve on
+EXPOSE 80
+
+# Run NGINX in the foregroun
+CMD ["nginx", "-g", "daemon off;"]
